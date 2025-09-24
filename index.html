@@ -1,355 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página personal de un streamer y creador de contenido profesional. Conecta conmigo en todas mis redes sociales.">
-    <meta name="keywords" content="streamer, creador de contenido, gamer, redes sociales, twitch, youtube, tiktok, instagram, facebook, discord">
-    <meta name="author" content="Falcon Hayabusa">
-    <meta property="og:title" content="Falcon Hayabusa - Streamer y Creador de Contenido">
-    <meta property="og:description" content="Bienvenido a mi espacio digital. Conéctate conmigo en todas mis redes sociales.">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <title>Conoceme</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/4facfe/ffffff?text=TN">
-    
-    <!-- Bootstrap 5 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- AOS Animations -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de bienvenida para mis streams, proyectos y comunidad. Conecta conmigo en todas mis redes sociales.">
+  <meta name="keywords" content="streamer, creador de contenido, gamer, redes sociales, twitch, youtube, tiktok, instagram, facebook, discord">
+  <meta name="author" content="Falcon Hayabusa">
+  <meta property="og:title" content="Mi Espacio de Streams - Falcon Hayabusa">
+  <meta property="og:description" content="Bienvenido a mi espacio digital. Conéctate conmigo en todas mis redes sociales.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>SOBRE MI</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/4facfe/ffffff?text=MS">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Personalizado -->
+  <style>
+    :root {
+      --primary-color: #4facfe;
+      --secondary-color: #2a3b4c;
+      --background-color: #0d1117;
+      --text-color: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a2a3a, #0d1117);
+      z-index: 0;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 20px 4rem;
+      position: relative;
+      min-height: 100vh;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
+
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .typed-text {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    .explore-btn {
+      padding: 14px 34px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(79,172,254,0.5);
+    }
+
+    .explore-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 35px rgba(79,172,254,0.8);
+    }
+
+    /* Social cards */
+    .social-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .social-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px 25px;
+      width: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: #fff;
+    }
+
+    .social-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .social-card i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .social-card span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .social-card:hover i {
+      transform: scale(1.2);
+    }
+
+    /* Colores redes */
+    .twitch { color: #9146ff; }
+    .youtube { color: #ff0000; }
+    .instagram { color: #e1306c; }
+    .discord { color: #5865f2; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #1a2a3a, #0d1117);
+      color: var(--text-color);
+      position: relative;
+      z-index: 2;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="gamer-bar"></div>
-    <!-- Pantalla de carga -->
-    <div class="loading">
-        <div class="loader"></div>
+  <div id="particles-js"></div>
+
+  <!-- HERO -->
+  <section class="hero-section" id="home">
+    <div class="hero-content" data-aos="fade-up">
+      <img src="./img/Levi.jpeg" alt="Foto de perfil" class="profile-pic">
+      <h1 class="hero-title">Un poco de contexto</h1>
+      <div class="typed-text"></div>
+      <p class="hero-subtitle">
+        Esta página será el punto de encuentro para mis streams, proyectos y la comunidad.  
+        Aquí podrás estar al tanto de lo nuevo y compartir grandes momentos conmigo.
+      </p>
+      <a href="Inicio.html" class="explore-btn">
+        <i class="fas fa-user me-2"></i>Conoceme
+      </a>
     </div>
+  </section>
 
-    <!-- Botón flotante de volver arriba -->
-    <a href="#" class="back-to-top animate-fade-in">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Mi página de streams | Fernando Ascencio y Moises Ricardo.</p>
+    </div>
+  </footer>
 
-    
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- ===== SECCIÓN HERO ===== -->
-    <section class="hero-section" id="home">
-        <!-- Vanta.js Galaxy canvas se inyecta automáticamente -->
-        <div class="hero-content">
-            <div class="profile-image" data-aos="zoom-in">
-                <img src="./img/falcon.jpg" 
-                     alt="Falcon Hayabusa" 
-                     class="profile-pic"
-                     onerror="this.onerror=null; this.src='https://i.ibb.co/4Y6v0zL/profile-pic.jpg';">
-            </div>
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                Hola, soy <span class="typed-text" id="typed-text"></span>
-            </h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
-                Streamer • Creador de contenido • Apasionado por los videojuegos y la programacion
-            </p>
-            <div class="about-me" data-aos="fade-up" data-aos-delay="400">
-                <p class="hero-description">
-                    Hola, un gusto conocerte. Soy un apasionado creador de contenido y streamer pequeño no conocido. 
-                    Comparto mi pasión por los videojuegos, reacciones y entretenimiento.
-                </p>
-            </div>
-        </div>
-        <!-- Forma abstracta decorativa para el fondo -->
-        <div class="hero-bg-shape"></div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down fa-2x"></i>
-        </div>
-    </section>
+  <script>
+    AOS.init();
+    new Typed(".typed-text", {
+      strings: ["Gamer, streamer y programador", "Proximo creador de contenido", "Conoceme y juguemos juntos :3"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true
+    });
 
-    <!-- ===== SECCIÓN REDES SOCIALES ===== -->
-    <section class="social-section" id="social">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Sígueme en mis redes</h2>
-            <p class="section-subtitle text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-                Conéctate conmigo en todas mis plataformas y no te pierdas ningún contenido
-            </p>
-            
-            <div class="row g-4 justify-content-center">
-                <!-- Twitch -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="social-card animate-fade-in twitch-card" onclick="window.open('https://www.twitch.tv/alyx_hayabusa', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-twitch"></i>
-                        </div>
-                        <h3 class="social-title">Twitch</h3>
-                        <p class="social-handle">@alyx_hayabusa</p>
-                        <span class="badge">¡Únete!</span>
-                        <div class="social-hover">
-                            <span>Ver transmisiones</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- YouTube -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-                    <div class="social-card animate-fade-in youtube-card" onclick="window.open('https://youtube.com/@alyx092', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <h3 class="social-title">YouTube</h3>
-                        <p class="social-handle">@alyx092</p>
-                        <span class="badge">pocos suscriptores</span>
-                        <div class="social-hover">
-                            <span>Ver mis videos</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- TikTok -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="social-card animate-fade-in tiktok-card" onclick="window.open('https://www.tiktok.com/@falcon_hayabusa', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-tiktok"></i>
-                        </div>
-                        <h3 class="social-title">TikTok</h3>
-                        <p class="social-handle">@falcon_hayabusa</p>
-                        <span class="badge">Hago videos de vez en cuando</span>
-                        <div class="social-hover">
-                            <span>Ver mis TikToks</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Twitter/X -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                    <div class="social-card animate-fade-in twitter-card" onclick="window.open('https://x.com/Falcon_Leitan', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <h3 class="social-title">Twitter/X</h3>
-                        <p class="social-handle">@Falcon_Leitan</p>
-                        <span class="badge">Sígueme y juguemos</span>
-                        <div class="social-hover">
-                            <span>Ver mis tweets</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Instagram -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                    <div class="social-card animate-fade-in instagram-card" onclick="window.open('https://www.instagram.com/falcon_leitan', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <h3 class="social-title">Instagram</h3>
-                        <p class="social-handle">@falcon_leitan</p>
-                        <div class="social-hover">
-                            <span>Ver mis fotos</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Facebook -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                    <div class="social-card animate-fade-in facebook-card" onclick="window.open('https://www.facebook.com/alyx.hayabusa.117092', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <h3 class="social-title">Facebook</h3>
-                        <p class="social-handle">@alyx.hayabusa.117092</p>
-                        <span class="badge">Sígueme</span>
-                        <div class="social-hover">
-                            <span>Ver mi perfil</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- GitHub -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
-                    <div class="social-card animate-fade-in github-card" onclick="window.open('https://github.com/alyxhayabusa-source', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3 class="social-title">GitHub</h3>
-                        <p class="social-handle">@alyxhayabusa-source</p>
-                        <div class="social-hover">
-                            <span>Ver repositorios</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Discord -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="social-card animate-fade-in discord-card" onclick="window.open('https://discord.gg/ynY3tzDvWH', '_blank')">
-                        <div class="social-icon-wrapper">
-                            <i class="fab fa-discord"></i>
-                        </div>
-                        <h3 class="social-title">Discord</h3>
-                        <p class="social-handle">Únete a la comunidad</p>
-                        <span class="badge">¡Conversemos!</span>
-                        <div class="social-hover">
-                            <span>Unirse al servidor</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SECCIÓN MI CONTENIDO ===== -->
-    <section class="content-section" id="content">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Mi contenido</h2>
-            <p class="section-subtitle text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-                Esto es un poco de lo que encontrarás en mis directos y videos.
-            </p>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="content-card">
-                        <div class="content-icon"><i class="fas fa-gamepad"></i></div>
-                        <h3 class="content-title">Gameplays y directos</h3>
-                        <p class="content-description">Estare jugando fornite con amigos, a veces hare privados y ademas charlaremos entre todos nosotros para conocernos y hacer una muy buena y bonita comunidad :3.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="content-card">
-                        <div class="content-icon"><i class="fas fa-comments"></i></div>
-                        <h3 class="content-title">Reacciones y charlas</h3>
-                        <p class="content-description">Reaccionaremos a varias cosas, pero lo mas esencial sera reaccionar a clips o narrar partidas buenas o sobre mi en este caso para ver en que puedo mejorar.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="content-card">
-                        <div class="content-icon"><i class="fas fa-code"></i></div>
-                        <h3 class="content-title">Proyectos de programación</h3>
-                        <p class="content-description">De vez en cuando, comparto mis proyectos de programación y desarrollo, mostrando cómo la tecnología y el gaming se unen.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Falcon Hayabusa y Fernando Ascencio. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/main.js"></script>
-    
-    <!-- Contador de números animado -->
-    <script>
-        // Inicializar contadores
-        function initCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = target / speed;
-                    
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                
-                // Iniciar contador cuando el elemento sea visible
-                const observer = new IntersectionObserver((entries) => {
-                    if (entries[0].isIntersecting) {
-                        updateCount();
-                        observer.unobserve(counter);
-                    }
-                });
-                
-                observer.observe(counter);
-            });
-        }
-        
-        // Llamar a la función cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', () => {
-            initCounters();
-            
-            // Efecto de scroll suave para enlaces internos
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 70,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Mostrar/ocultar botón back-to-top
-            window.addEventListener('scroll', function() {
-                const backToTop = document.querySelector('.back-to-top');
-                if (!backToTop) return;
-                if (window.scrollY > 250) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
-            });
-        });
-    </script>
-    <!-- Script para el preloader -->
-    <script>
-        // Ocultar el preloader cuando la página se haya cargado completamente
-        window.addEventListener('load', function() {
-            const preloader = document.querySelector('.loading');
-            if (preloader) {
-                preloader.classList.add('loaded');
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                }, 1000);
-            }
-            
-            // Inicializar tooltips de Bootstrap
-            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-            
-            // Inicializar popovers de Bootstrap
-            const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-            popoverTriggerList.map(function (popoverTriggerEl) {
-                return new bootstrap.Popover(popoverTriggerEl);
-            });
-        });
-    </script>
+    particlesJS.load('particles-js', 'assets/particles.json');
+  </script>
 </body>
 </html>
